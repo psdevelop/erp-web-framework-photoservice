@@ -1,0 +1,96 @@
+<html>
+<body>
+	<table border=0 width="95%" align="center">
+	<tr>
+		<td><h2>Customization guide for Rad User Manager</h2></td>
+	</tr>
+	<tr>
+	  <td>
+	  This customization guide describes how you can change the appearance of your Rad
+	  User manager installation. The companion document, <a href="config.html">the configuration
+	   guide</a> shows you how you can make change the behavior of the user manager.
+	   
+	   <dl>
+		<dt><h3 style="margin-bottom: 2px">User Interface Customizations.</h3></dt>
+		<dd>
+		  <dl>
+			<dt><h4>Look and Feel</h4></dt>
+			<dd><p>
+				You can completely change the appearance of the members section by adding your custom header
+				and footer to the head.txt and foot.txt in the inc/ folder. These files can contain
+				javascripts, DHTML and links to images to give the members area the same consistent look 
+				and feel on other areas of your website.
+				</p>
+		
+				<p>Just basic PHP knowledge would enable you to make further customization by editing the
+				create_header() and create_footer() functions found in header.php. Notice how you can change
+				the title and heading for each page by setting the $title and $pgH1 variables.
+				</p>
+			</dd>
+			<dt><h4>Sign Up Form</h4></dt>
+			<dd><p>You can change the appearance of the sign up form by editing the sing up.txt file
+			found in the members folder. Please make a carefull note of the variable names, they 
+			cannot be changed without making changes to sign up.php as well.</p>
+			<p>If you are willing to edit simple PHP code, you can change the fields that the user
+			is asked to fill in at sign up time by adding/removing them from the sign up.txt file.
+			</p>
+			</dd>
+			
+			<dt><h4>Login Form</h4></dt>
+			<dd>Login form can be customized by changing the login.txt file. Once again please make
+			sure that you do not alter the variable names in the form fields.
+			</dd>
+			
+			<dt><h4>Profile Changer</h4></dt>
+			<dd>The user profile and password changer are both contained in the profile.txt file. As with the login and sign up forms you need to be carefull about not changing the variable names.
+			</dd>
+			
+			<dt><h4>Thank you message</h4></dt>
+			<dd>Once the sign up process is complete the contents of the thanks.txt file will be displayed to the user. Edit this file to customize the message that's displayed along with it's appearance.
+			</dd>
+			
+		 </dl>
+		</dd>
+		<dt><h3>Email Notifications</h3></dt>
+		<dd>
+			<p>Most of the messages displayed in various sections of the Rad User Manager 
+			can be easily customized without having to edit the code. The same can be said for the
+			various email alerts that are sent of by the software at different stages of the sign up
+			process. The text of these messages are stored as separate files, which makes it possible
+			for you to change them easily without having to edit the code.
+			</p>
+
+			<dl>
+			<dt><h4>Welcome Message</h4></dt>
+			<dd>
+			<p>
+			welcome-email.txt files contains the text of the message that's emailed to users at 
+			the time of sign up. If the $validate_email parameter is set (config.php) the email
+			that's sent will contain a special link, clicking on this email will activate her
+			account. The sign up.php script will insert the username, the special link and the
+			site name into the body of this email. The places where this information is injected
+			are marked with a '%s' symbol and they should not be removed from welcome-email.txt unless
+			you make changes to sign up.php
+			</p>
+
+			<p>If you do not wish to send a welcome email at all set both to $validate_email and
+			$welcome_email variables in config.php to 0.</p>
+			</dd>
+			
+			<dt><h4>Password Reminder</h4></dt>
+			<dd>
+			<p>The reminder.txt file contains the text of the message sent by the system when the user
+			requests that his password be reset. The reminder.php script will inject the username and
+			the new system generated password for the user into the body of this email. The places where
+			this data is inserted are marked by the a '%s' symbol and it should not be removed without
+			making the corresponding change in reminder.php
+			</p>
+			</dd>
+		</dl>
+	  </dd>
+	</dl>
+		
+
+	</table>
+</body>
+</html>

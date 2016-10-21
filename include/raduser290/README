@@ -1,0 +1,14 @@
+Rad User Manager 2.90
+---------------------
+
+This is an experimental version that attempts to make the user manager
+compatible with the postgresql database. Please download version 2.11
+if you only intend to use the product along side a mysql database.
+
+Thank you for you for downloading the Rad User Manager. Please refer to
+the INSTALL file to get started with your setup. Additional information
+about the product and it's configuration is available online at 
+http://www.radinks.net/user/?dn
+
+
+

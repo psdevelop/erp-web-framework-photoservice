@@ -1,0 +1,8 @@
+Hello %s
+This message is in response to your request to have your password for the Rad Inks
+website reset. Your new password is
+%s
+Please change it as soon as you login the next time.
+
+With best regards
+

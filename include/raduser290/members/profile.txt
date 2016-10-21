@@ -1,0 +1,147 @@
+
+<style type="text/css">
+<!--
+.mTable
+{
+	background-color: #ffffff;
+	
+}
+
+.mTr
+{
+	background-color: #e5e5c6;
+	border-color: #eeeeee;
+	
+}
+-->
+</style>
+<table width=100% border=0 >
+<tr><td colspan="2" align="center"><h3>Profile Manager for <? echo $profile->userName; ?></h3><br></td></tr>
+<tr>
+  <td valign="middle">
+
+  	<!-- the pasword changer -->
+	<form method="post" action="profile.php" autoComplete="off">
+	<table border="0" class="mTable" cellspacing="1" align="center" cellpadding="8" width="300">
+	<tr class="mTr" ><td colspan=2 align="center">Password Changer</td></tr>
+	<tr class="mTr"><td>User Name</td><td><? echo $profile->userName; ?></td></tr>
+	<tr class="mTr"><td>Password</td><td><input type="password" name="password"></td></tr>
+	<tr class="mTr"><td>Password Confirm</td><td><input type="password" name="password1"></td></tr>
+	<tr class="mTr"><td colspan=2 align="center">
+		<input type="hidden" name="action" value="chgpwd">
+		<input type="hidden" name="userId" value="<? echo $_REQUEST['userId']; ?>">
+		<input type="submit" name="submit" value="Change password"></td></tr>
+	</table>
+	</form>
+	<!-- ends the password changer -->
+	
+	<br>
+	<form method="post" action="profile.php">
+	<table border="0" class="mTable" cellspacing="1" align="center" cellpadding="8" width="300">
+	<tr class="mTr" ><td colspan="2"  align="center">News Letters</td></tr>
+	<tr class="mTr" ><td colspan="2">Do you wish to recieve infrequent emails about new releases and updates to existing products?</td></tr>
+	<tr class="mTr" >
+		<td align="center">
+			<input type="radio" name="news" value="yes" <? if($profile->newsLetter==1) echo 'checked'; ?>>Yes</td>
+		<td align="center">
+			<input type="radio" name="news" value="donot" <? if($profile->newsLetter==0) echo 'checked'; ?> >No</td></tr>
+	<tr class="mTr" ><td colspan="3" align="center">
+	<input type="hidden" name="action" value="chgnews">
+	<input type="hidden" name="userId" value="<? echo $_REQUEST['userId']; ?>">
+	<input type="submit" name="submit" value="update"></td></tr>
+	</table>
+	</form>
+	<!-- ends newsletter subscription settings -->
+	<?	
+		/* 
+		 * user status change is available only to administrators.
+		 */
+		if(is_admin() != 0)
+		{
+
+			$status = get_user_status($userId);
+	?>
+			<br>
+			<form method="post" action="profile.php">
+			<table border="0" class="mTable" cellspacing="1" align="center" cellpadding="8" width="300">
+			  <tr class="mTr" ><td align="center">User Status</td>
+				<td><select name="status">
+						<option value="0" <? if($status == 0) echo "selected"; ?> >Disabled</option>
+						<option value="1" <? if($status == 1) echo "selected"; ?> >Enabled</option>
+						<option value="2" <? if($status == 2) echo "selected"; ?> >Administrator</option>
+						
+					</select></td>
+		 	  </tr>
+				<tr class="mTr" ><td align="center" colspan="2">
+				<input type="hidden" name="action" value="chgstatus">
+				<input type="hidden" name="userId" value="<? echo $_REQUEST['userId']; ?>">
+				<input type="submit" name="submit" value="update"></td></tr>
+				</table>
+		</form>
+	<?	} 	?>
+  </td>
+  <td>
+	<form method="post" action="profile.php">
+
+	
+	<table border="0" class="mTable" cellspacing="1" align="center" cellpadding="8" width="300"
+ 	 <tr  class="mTr"><td colspan=2 align="center">Update Profile</td></tr>
+	 <tr class="mTr"><td>First Name</td>
+
+		<td><input type="text" name="firstName" value="<? echo $profile->firstName; ?>"></td></tr>
+
+	 <tr class="mTr"><td>Last Name</td>
+
+		<td><input type="text" name="lastName" value="<? echo $profile->lastName; ?>"></td></tr>
+
+	 <tr class="mTr"><td>Email</td>
+ 	  <td><input type="text" name="email" value="<? echo $profile->email; ?>"></td></tr>
+	
+	 <tr class="mTr"><td>Postal Address</td>
+
+	  <td class="mTr" ><input type="text" name="addr1" value="<? echo $profile->addr1; ?>"></td></tr>
+
+	 <tr  class="mTr"><td>Address (line2)</td>
+
+	  <td class="mTr"><input type="text" name="addr2" value="<? echo $profile->addr2; ?>"></td></tr>
+
+	 <tr class="mTr" ><td>City</td>
+
+	  <td><input type="text" name="city" value="<? echo $profile->city; ?>"></td></tr>
+
+	 <tr class="mTr"><td>State/Province</td>
+
+	  <td><input type="text" name="state" value="<? echo $profile->state; ?>"></td></tr>
+
+	 <tr class="mTr"><td>Country</td>
+
+	  <td><input type="text" name="country" value="<? echo $profile->country; ?>"></td></tr>
+
+	 <tr class="mTr"><td>Tel</td><td>
+
+	  <input type="text" name="tel" value="<? echo $profile->tel; ?>"></td></tr>
+	  
+	<tr class="mTr"><td>Mobile</td><td>
+	  <input type="text" name="mobitel" value="<? echo $profile->mobiTel; ?>"></td></tr>	
+	    
+	<tr class="mTr"><td>Tel - Residence</td><td>
+	  <input type="text" name="hometel" value="<? echo $profile->homeTel; ?>"></td></tr>	
+	  
+<tr class="mTr"><td>Web site</td><td>
+	  <input type="text" name="web" value="<? echo $profile->web; ?>"></td></tr>		  
+	 <tr class="mTr"><td>Fax</td><td>
+
+	  <input type="text" name="fax" value="<? echo $profile->fax; ?>"></td></tr>
+
+	 <tr class="mTr"><td colspan=2 align="center">
+	 		<input type="hidden" name="action" value="update">
+			<input type="hidden" name="userId" value="<? echo $_REQUEST['userId']; ?>">
+			<input type="submit" name="submit" value="Update profile"></td></tr>
+
+	</table>
+
+	</form>
+     </td>
+   </tr>
+</table>
+<br>	

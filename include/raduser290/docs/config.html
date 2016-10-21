@@ -1,0 +1,117 @@
+<html>
+<body>
+	<table border=0 width="95%" align="center">
+	<tr>
+		<td><h2>Configuration guide for Rad User Manager</h2></td>
+	</tr>
+	<tr>
+	  <td>
+	  <p>
+	  This configuration guide looks at how config.php file can be used to change the configuration of your Rad
+	  User manager installation. The companion document, <a href="customize.html">the customization
+	   guide</a> shows you how you can make changes to the appearance of the members area. This document deals more with the behavior of the application.
+	   <p>
+	   <p>Additional information on the configuration settings are found with in the config.php file in the form of comments</p>
+	   
+	   <dl>
+		<dt><h3 style="margin-bottom: 2px">Database Settings.</h3></dt>
+		<dd>
+		  <dl>
+			<dt><h4>db_server</h4></dt>
+			<dd><p>
+				The host name or IP address of your mysql database server. Your system administrator
+				or ISP will be able to provide you with this and other information such as username
+				and password to access your database installation.
+				</p>
+			</dd><h4>db_user</h4></dt>
+			<dd>
+				A mysql user account with permission to access the database given in db_name  (see below)	</dd>
+			
+			</dd><h4>db_pass</h4></dt>
+			<dd>
+				The password for the mysql user account given above.
+			</dd>
+			
+			</dd><h4>db_name</h4></dt>
+			<dd>
+				The database that contains the tables from the database installation script database.sql
+			</dd>
+		   </dl>
+		  </dd>
+		<dt><h3>Email Settings</h3></dt>
+			<dd>
+				<dl>
+				 <dt><h4>validate_email</h4></dt>
+				 <dd><p>When this is set to 1, an email will be sent out to each user who 
+				 signs up asking them to click on a special link with in the message to confirm their
+				 subscription.  You should make use of it if you don't want users to sign up with 
+				 bogus email addresses and other inaccurate information.
+				 </p>
+				 <p>With this settings all accounts are disabled by default when it's first created, and they become active only when the user clicks on the validation link.</p>
+				 </dd>
+				
+				 <dt><h4>welcome_email</h4></dt>
+				 <dd>
+				 <p>This configuration setting takes effect only when validate_email is set to 0. Set 
+				 welcome_email to a value of one if you want users a receive a welcome message when they sign up. The message will be sent from the address given in member_service_email</p>
+				 </dd>
+				 
+				 <dt><h4>member_service_email</h4></dt>
+				 <dd>All outgoing email sent by the user manager will have this has the from and reply
+				 to email address. It should be a valid email address. On most installations your out
+				 going mail server will only allow certain email addresses to be used. Please consult your system administrator if in doubt.
+				 </dd>
+				</dl>
+			</dd>
+			
+		<dt><h3>Site Settings</h3></dt>
+			<dd>
+			<dl>
+				<dt><h4>site_name</h4></dt>
+				<dd>This is the name of your website, and where ever the Rad User manager software needs to refer to your site by name this is the value that will be used.
+				</dd>
+				
+				<dt><h4>site_url</h4></dt>
+				<dd>This url for the home page of your website.
+				</dd>
+			</dl>
+			</dd>
+		
+		<dt><h3>Messages</h3></dt>
+		<dd>
+		The final section of this configuration guide defines the messages that are displayed at
+		various locations in the members area. Almost all of the following variables accept HTML
+		strings as well as plain text.
+			<dl>
+			<dt><h4>$msg_title</h4></dt>
+			<dd>
+			<p>
+			This is the default settings for the title tag in your members section. This variable can 
+			be overridden at page level by changing setting a $title tag in each page before the
+			call to the create_header() method. 
+			</p>
+			</dd>
+			
+			<dt><h4>$msg_sign up</h4></dt>
+			<dd>
+			<p>This is the message that will be displayed on the sign up page. HTML can be used.
+			</p>
+			</dd>
+			
+			<dt><h4>$msg_password_reminder</h4></dt>
+			<dd>This message will appear on the password reminder page and will serve as a prompt to
+			the user to enter his account name. HTML can be used</dd>
+			
+			<dt><h4>$msg_pass_changed</h4></dt>
+			<dd>When the password reminder script executes successfully this message will be displayed. HTML can be used.</dd>
+
+			<dt><h4>$msg_validated</h4></dt>
+			<dd>This is the message that's displayed when the user clicks on the special link in the validation email. Thus it will never be displayed if you have a setting of 0 for the validate_email parameter.</dd>			
+		</dl>
+	  </dd>
+	</dl>
+		
+
+	</table>
+</body>
+</html>

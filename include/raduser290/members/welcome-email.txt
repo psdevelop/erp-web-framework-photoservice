@@ -1,0 +1,15 @@
+Thank you %s, for choosing to become a member of the Rad Inks website.
+
+To complete the signup process please click on the link below. This will
+activate your account.
+%s
+
+If you did not apply to become a member, someone may have filled in the
+sign up form using your email address. In that case please disregard this
+email, you will not recieve any further correspondence from us.
+
+
+Thank you.
+%s
+
+

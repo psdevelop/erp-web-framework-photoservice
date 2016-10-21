@@ -1,0 +1,36 @@
+<p>&nbsp;</p>
+<form action="login.php" method="post">
+
+<table width="300" height="211" align="center" border=0 background="../images/bridge.jpg">
+<tr><Td valign="middle" align="center">
+  <table border=1>
+    <tr>
+      <td align="center"><font color="white">  &nbsp; User name &nbsp;</font></td>
+      <td><input type="text" name="username"  value="<? if(isset($_REQUEST['username'])) echo $_REQUEST['username']; ?>" style="width: 150px"></td>
+    </tr>
+    <tr>
+      <td align="center"><font color="white"> &nbsp; Password  &nbsp;</font></td>
+      <td><input type="password" name="password" style="width: 150px"></td>
+    </tr>
+	<tr>
+	  <Td colspan="2" align="right"><input type="submit" name="submit" value="login" style="color: #003366; width: 100px"> </td>
+	</tr>
+	</table>
+</td></tr>
+</table>
+<table width="300" align="center">
+<tr><td align="center">
+		<a href="signup.php">Sign Up</a> &nbsp; | &nbsp;
+		<a href="reminder.php">Password Reminder</a></p>
+</td></tr>
+</table>
+
+<?
+	if(isset($ret))
+	{
+		echo '<input type="hidden" name="ret" value="1">';
+		printf('<input type="hidden" name="url" value="%s">',$HTTP_REFERER);
+	}
+?>
+
+</form>

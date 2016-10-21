@@ -1,0 +1,8 @@
+<table width="80%" align="center">
+<tr><td>
+<p>Thank you very much for signing up as a Member of <? echo $site_name; ?>. You will recieve a 
+confirmation email shortly at the address you have specified. Please click on the validation link
+in that email  to complete the sign up process and activate your account.</p>
+</td></tr>
+</table>
+	

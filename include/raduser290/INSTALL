@@ -1,0 +1,39 @@
+Installation Guide For Rad User Manager version 2.90
+
+Database Installation.
+----------------------
+Create a database on your mysql server and run the database.sql script
+included in this folder to create the necessary tables. Then you need
+to create a mysql user account with insert,update and select privileges
+on this database. 
+
+Edit the config.php file in the inc/ folder to reflect these settings.
+Additional help is available in the configuration guide in the docs 
+folder. The config.php file itself is well commented.
+
+
+Script Installation.
+--------------------
+Move the inc/ and members folders to your webspace. Open the URL that 
+corresponds to the members/ folder with your browser. You should see a
+login form. You can test the system with the default user account 
+(user/radmin) to login. If you can log in to your system, the 
+installation is successfull. You can then customize the User Manager by
+editing the config.php file. 
+
+
+Installing the admin section.
+-----------------------------
+Copy the admin section into the web space as above. Use the built in
+administrative account (admin/radmin) to login. When logged in as the
+administrator you will see an item labelled 'Manage Users' on your 
+start page. Don't forget to change your default password.
+
+
+Additional configuration information is available at 
+http://www.radinks.net/user/?dn
+
+
+
+
+

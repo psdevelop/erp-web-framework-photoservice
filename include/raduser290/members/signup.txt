@@ -1,0 +1,38 @@
+<form action="signup.php" method="post">
+<table width="80%" align="center">
+  <tbody>
+    <tr>
+      <td>User name</td>
+      <td><input type="text" name="username"  value="<? echo $_REQUEST['username']; ?>" style="width: 150px"></td>
+	  <td></td>
+    </tr>
+    <tr>
+      <td>Password</td>
+      <td><input type="password" name="password" style="width: 150px"></td>
+	  <td></td>
+    </tr>
+    <tr>
+      <td>Confirm Password</td>
+      <td><input type="password" name="password1" style="width: 150px"></td>
+	  <td></td>
+    </tr>
+	<tr>
+      <td>Email</td>
+      <td><input type="text" name="email" style="width: 150px"></td>
+	  <td></td>
+    </tr>
+	<tr>
+      <td>First Name</td>
+      <td><input type="text" name="firstname" style="width: 150px"></td>
+	  <td></td>
+    </tr>
+	<tr>
+      <td>Last Name</td>
+      <td><input type="text" name="lastname" style="width: 150px"></td>
+	  <td></td>
+    </tr>
+	
+	<tr><td colspan="3" align="center"><input type="submit" name="submit"></td></tr>
+  </tbody>
+</table>
+</form>

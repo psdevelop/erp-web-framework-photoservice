@@ -1,0 +1,68 @@
+dt {
+	font-weight: bold;
+}
+
+table.title, td.title, th.title {
+	border: 1px solid #999999;
+}
+th.title {
+	text-align: left;
+	background-color: #ccccff;
+	font-size: 140%;
+	padding: 2px;
+}
+
+table.body, td.body {
+	border-left: 1px solid #999999;
+	border-right: 1px solid #999999;
+	border-bottom: 1px solid #999999;
+}
+
+td.type {
+	font-family: monospace;
+	font-size: 70%;
+	border: 1px solid #999999;
+	vertical-align: top;
+}
+
+td.name, td.description {
+	border: 1px solid #999999;
+}
+
+
+table.header, td.header {
+	border: none;
+	background-color: #eeeeff;
+	spacing: 4px;
+	padding: 4px;
+	font-weight: bold;
+}
+
+table.small_links {
+	font-family: monospace;
+	font-size: 70%;
+}
+
+td.short_title {
+	text-align: right;
+	font-style: italic;
+}
+
+table.inherit, td.inherit, th.inherit {
+	border: 1px solid #999999;
+}
+
+th.inherit {
+	text-align: left;
+	background-color: #eeeeff;
+	padding: 2px;
+}
+
+td.inherit {
+	font-family: monospace;
+	font-size: 90%;
+}
+
+p.footer {
+	font-size: 80%;
+}

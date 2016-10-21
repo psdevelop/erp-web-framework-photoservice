@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+
+<title>Rad User</title>
+
+<link rel="stylesheet" type="text/css" href="../stylesheet.css" />
+<link rel="start" href="overview-summary.html" />
+
+</head>
+
+<body>
+
+<table width="100%" cellpadding="0" class="header">
+<tr><td class="header">
+<a href="../overview-summary.html">Overview</a>
+Package
+</td><td class="short_title">
+Rad User</td></tr>
+</table>
+
+<table width="100%" cellpadding="0" class="small_links">
+<tr>
+<td><a href="../index.html" target="_top">FRAMES</a> <a href="package-summary.html" target="_top">NO FRAMES</a></td>
+</tr>
+</table>
+
+<h1>Package RadUser</h1>
+
+
+<hr />
+
+<table width="100%" cellspacing="0" class="title"><tr><th colspan="2" class="title">Classes</th></tr><tr><td class="name"><a href="UserAdmin.html">UserAdmin</a></td></tr><tr><td class="name"><a href="UserProfile.html">UserProfile</a></td></tr></table><br /><table width="100%" cellspacing="0" class="title"><tr><th colspan="2" class="title">Functions</th></tr><tr><td class="name"><a href="package-functions.html#change_newsletter">change_newsletter</a></td><td class="description">subscribe/unsubscribe from newsletters </td></tr><tr><td class="name"><a href="package-functions.html#change_password">change_password</a></td><td class="description">changes the password for the given user </td></tr><tr><td class="name"><a href="package-functions.html#change_profile">change_profile</a></td><td class="description">called in when the user submits the change profile form </td></tr><tr><td class="name"><a href="package-functions.html#clean_sessions">clean_sessions</a></td><td class="description">this should not be a function, it should be a cron. </td></tr><tr><td class="name"><a href="package-functions.html#create_footer">create_footer</a></td><td class="description">Creates the footer on each page </td></tr><tr><td class="name"><a href="package-functions.html#create_header">create_header</a></td><td class="description">creates the header on each page </td></tr><tr><td class="name"><a href="package-functions.html#enable_account">enable_account</a></td><td class="description">if validate_email==1, accounts are created in the disabled state, call this method to enable such accounts. </td></tr><tr><td class="name"><a href="package-functions.html#err_message">err_message</a></td><td class="description">display a generic error message </td></tr><tr><td class="name"><a href="package-functions.html#gen_password">gen_password</a></td></tr><tr><td class="name"><a href="package-functions.html#get_email">get_email</a></td><td class="description">retrieves the email address given the username, used mainly by the password reminder service. </td></tr><tr><td class="name"><a href="package-functions.html#get_name">get_name</a></td><td class="description">this function returns the currently logged in user's username </td></tr><tr><td class="name"><a href="package-functions.html#get_profile">get_profile</a></td><td class="description">returns an instance of UserProfile for the member whose userId is passed in as a parameter. </td></tr><tr><td class="name"><a href="package-functions.html#get_user_status">get_user_status</a></td><td class="description">retrieves the uers's status. </td></tr><tr><td class="name"><a href="package-functions.html#is_admin">is_admin</a></td><td class="description">Are you logged in as the administrator? also updates the 'lastAccess' field in the logged users table. </td></tr><tr><td class="name"><a href="package-functions.html#is_logged">is_logged</a></td><td class="description">returns 0 if you are not logged in. </td></tr><tr><td class="name"><a href="package-functions.html#is_valid">is_valid</a></td><td class="description">returns userId on success. </td></tr><tr><td class="name"><a href="package-functions.html#is_valid_addr">is_valid_addr</a></td><td class="description">hotmail, msn, bigfoot and other free addresses are not allowed. </td></tr><tr><td class="name"><a href="package-functions.html#is_valid_key">is_valid_key</a></td><td class="description">Is the specified validation key ok? returns userId on success. </td></tr><tr><td class="name"><a href="package-functions.html#is_valid_referer">is_valid_referer</a></td><td class="description">check the referer to minimize abuse.. </td></tr><tr><td class="name"><a href="package-functions.html#is_valid_username">is_valid_username</a></td><td class="description">returns true if the username and password, and password confirm fields are set. </td></tr><tr><td class="name"><a href="package-functions.html#log_out">log_out</a></td></tr><tr><td class="name"><a href="package-functions.html#reset_password">reset_password</a></td></tr><tr><td class="name"><a href="package-functions.html#sanitize_variable">sanitize_variable</a></td></tr><tr><td class="name"><a href="package-functions.html#set_session">set_session</a></td><td class="description">Creates an entry in the logged users table. </td></tr><tr><td class="name"><a href="package-functions.html#set_user_status">set_user_status</a></td><td class="description">this method changes the user status. </td></tr><tr><td class="name"><a href="package-functions.html#set_validated">set_validated</a></td><td class="description">generally called when the user clicks on the link given in the account verification email. </td></tr><tr><td class="name"><a href="package-functions.html#show_profile">show_profile</a></td><td class="description">displays the box that allows the user to view/change his profile </td></tr></table><br /><table width="100%" cellspacing="0" class="title"><tr><th colspan="2" class="title">Globals</th></tr><tr><td class="name"><a href="package-globals.html#$_REQUEST">$_REQUEST</a></td></tr><tr><td class="name"><a href="package-globals.html#$admin">$admin</a></td></tr><tr><td class="name"><a href="package-globals.html#$catId">$catId</a></td></tr><tr><td class="name"><a href="package-globals.html#$con">$con</a></td></tr><tr><td class="name"><a href="package-globals.html#$db_name">$db_name</a></td></tr><tr><td class="name"><a href="package-globals.html#$db_pass">$db_pass</a></td></tr><tr><td class="name"><a href="package-globals.html#$db_server">$db_server</a></td></tr><tr><td class="name"><a href="package-globals.html#$db_user">$db_user</a></td></tr><tr><td class="name"><a href="package-globals.html#$del_x">$del_x</a></td></tr><tr><td class="name"><a href="package-globals.html#$imgDir">$imgDir</a></td></tr><tr><td class="name"><a href="package-globals.html#$member_service_email">$member_service_email</a></td><td class="description">The following email address will be used in the from field for password reminder and user validation emails. </td></tr><tr><td class="name"><a href="package-globals.html#$msg_pass_changed">$msg_pass_changed</a></td><td class="description">this message is displayed after the password is reset successfully. </td></tr><tr><td class="name"><a href="package-globals.html#$msg_password_reminder">$msg_password_reminder</a></td><td class="description">this is the prompt on the password reminder page. </td></tr><tr><td class="name"><a href="package-globals.html#$msg_signup">$msg_signup</a></td><td class="description">This is the prompt on the signup page. </td></tr><tr><td class="name"><a href="package-globals.html#$msg_title">$msg_title</a></td><td class="description">This is the default setting for the <title></title> tag of each page in the members area. </td></tr><tr><td class="name"><a href="package-globals.html#$msg_validated">$msg_validated</a></td><td class="description">The message to be displayed when the user clicks on the account validation link. </td></tr><tr><td class="name"><a href="package-globals.html#$password">$password</a></td></tr><tr><td class="name"><a href="package-globals.html#$password1">$password1</a></td></tr><tr><td class="name"><a href="package-globals.html#$site_name">$site_name</a></td><td class="description">site_name should be set to the name of your website. </td></tr><tr><td class="name"><a href="package-globals.html#$site_url">$site_url</a></td><td class="description">the url to the home page of your website. </td></tr><tr><td class="name"><a href="package-globals.html#$strt">$strt</a></td></tr><tr><td class="name"><a href="package-globals.html#$submit">$submit</a></td></tr><tr><td class="name"><a href="package-globals.html#$title">$title</a></td></tr><tr><td class="name"><a href="package-globals.html#$userId">$userId</a></td></tr><tr><td class="name"><a href="package-globals.html#$userStatus">$userStatus</a></td></tr><tr><td class="name"><a href="package-globals.html#$validate_email">$validate_email</a></td><td class="description">When validate_email is set to one, users are sent an email with a special 'account validation link'. </td></tr><tr><td class="name"><a href="package-globals.html#$welcome_email">$welcome_email</a></td><td class="description">Set to 1, if the system should send out a welcome email. </td></tr></table><br />
+<hr />
+
+<table width="100%" cellpadding="0" class="header">
+<tr><td class="header">
+<a href="../overview-summary.html">Overview</a>
+Package
+</td><td class="short_title">
+Rad User</td></tr>
+</table>
+
+<table width="100%" cellpadding="0" class="small_links">
+<tr>
+<td><a href="../index.html" target="_top">FRAMES</a> <a href="package-summary.html" target="_top">NO FRAMES</a></td>
+</tr>
+</table>
+
+<hr />
+
+<p class="footer">This document was generated by <a href="http://phpdoctor.sourceforge.net/">PHPDoctor: The PHP Documentation Creator</a>.</p>
+</body>
+</html>

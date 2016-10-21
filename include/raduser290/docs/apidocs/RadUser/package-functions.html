@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+
+<title>Functions</title>
+
+<link rel="stylesheet" type="text/css" href="../stylesheet.css" />
+<link rel="start" href="overview-summary.html" />
+
+</head>
+
+<body>
+
+<table width="100%" cellpadding="0" class="header">
+<tr><td class="header">
+<a href="../overview-summary.html">Overview</a>
+<a href="package-summary.html">Package</a>
+</td><td class="short_title">
+Rad User</td></tr>
+</table>
+
+<table width="100%" cellpadding="0" class="small_links">
+<tr>
+<td><a href="../index.html" target="_top">FRAMES</a> <a href="package-functions.html" target="_top">NO FRAMES</a></td>
+</tr>
+<tr>
+<td>SUMMARY: <a href="#summary">FUNCTIONS</a></td>
+<td>DETAIL: <a href="#detail">FUNCTIONS</a></td>
+</tr>
+</table>
+
+<hr />
+
+<h1>Functions</h1>
+
+<hr />
+
+<br />
+<a name="summary"></a>
+<table width="100%" cellspacing="0" class="title">
+<tr><th colspan="2" class="title">Summary</th></tr>
+</table>
+
+<table width="100%" cellspacing="0" class="body"><tr><td class="type">void</td><td class="description"><a href="#change_newsletter">change_newsletter</a><br />subscribe/unsubscribe from newsletters </td></tr><tr><td class="type">void</td><td class="description"><a href="#change_password">change_password</a><br />changes the password for the given user </td></tr><tr><td class="type">void</td><td class="description"><a href="#change_profile">change_profile</a><br />called in when the user submits the change profile form </td></tr><tr><td class="type">void</td><td class="description"><a href="#clean_sessions">clean_sessions</a><br />this should not be a function, it should be a cron. </td></tr><tr><td class="type">void</td><td class="description"><a href="#create_footer">create_footer</a><br />Creates the footer on each page </td></tr><tr><td class="type">void</td><td class="description"><a href="#create_header">create_header</a><br />creates the header on each page </td></tr><tr><td class="type">void</td><td class="description"><a href="#enable_account">enable_account</a><br />if validate_email==1, accounts are created in the disabled state, call this method to enable such accounts. </td></tr><tr><td class="type">void</td><td class="description"><a href="#err_message">err_message</a><br />display a generic error message </td></tr><tr><td class="type">void</td><td class="description"><a href="#gen_password">gen_password</a></td></tr><tr><td class="type">void</td><td class="description"><a href="#get_email">get_email</a><br />retrieves the email address given the username, used mainly by the password reminder service. </td></tr><tr><td class="type">void</td><td class="description"><a href="#get_name">get_name</a><br />this function returns the currently logged in user's username </td></tr><tr><td class="type">void</td><td class="description"><a href="#get_profile">get_profile</a><br />returns an instance of UserProfile for the member whose userId is passed in as a parameter. </td></tr><tr><td class="type">void</td><td class="description"><a href="#get_user_status">get_user_status</a><br />retrieves the uers's status. </td></tr><tr><td class="type">void</td><td class="description"><a href="#is_admin">is_admin</a><br />Are you logged in as the administrator? also updates the 'lastAccess' field in the logged users table. </td></tr><tr><td class="type">void</td><td class="description"><a href="#is_logged">is_logged</a><br />returns 0 if you are not logged in. </td></tr><tr><td class="type">void</td><td class="description"><a href="#is_valid">is_valid</a><br />returns userId on success. </td></tr><tr><td class="type">void</td><td class="description"><a href="#is_valid_addr">is_valid_addr</a><br />hotmail, msn, bigfoot and other free addresses are not allowed. </td></tr><tr><td class="type">void</td><td class="description"><a href="#is_valid_key">is_valid_key</a><br />Is the specified validation key ok? returns userId on success. </td></tr><tr><td class="type">void</td><td class="description"><a href="#is_valid_referer">is_valid_referer</a><br />check the referer to minimize abuse.. </td></tr><tr><td class="type">void</td><td class="description"><a href="#is_valid_username">is_valid_username</a><br />returns true if the username and password, and password confirm fields are set. </td></tr><tr><td class="type">void</td><td class="description"><a href="#log_out">log_out</a></td></tr><tr><td class="type">void</td><td class="description"><a href="#reset_password">reset_password</a></td></tr><tr><td class="type">void</td><td class="description"><a href="#sanitize_variable">sanitize_variable</a></td></tr><tr><td class="type">void</td><td class="description"><a href="#set_session">set_session</a><br />Creates an entry in the logged users table. </td></tr><tr><td class="type">void</td><td class="description"><a href="#set_user_status">set_user_status</a><br />this method changes the user status. </td></tr><tr><td class="type">void</td><td class="description"><a href="#set_validated">set_validated</a><br />generally called when the user clicks on the link given in the account verification email. </td></tr><tr><td class="type">void</td><td class="description"><a href="#show_profile">show_profile</a><br />displays the box that allows the user to view/change his profile </td></tr></table>
+<br />
+<hr />
+<br />
+
+<a name="detail"></a>
+<table width="100%" cellspacing="0" class="title">
+<tr><th class="title">Detail</th></tr>
+</table>
+
+<a name="change_newsletter"></a><h2>change_newsletter()</h2><code>void <strong>change_newsletter</strong>(var $userId, var $setting)</code><br /><p>subscribe/unsubscribe from newsletters </p><dl><dt>Parameters:</dt><dd><code>$userId</code><dd><code>$setting</code></dl><hr /><a name="change_password"></a><h2>change_password()</h2><code>void <strong>change_password</strong>(var $userId, var $password)</code><br /><p>changes the password for the given user </p><dl><dt>Parameters:</dt><dd><code>$userId</code><dd><code>$password</code></dl><hr /><a name="change_profile"></a><h2>change_profile()</h2><code>void <strong>change_profile</strong>(var $profile)</code><br /><p>called in when the user submits the change profile form </p><dl><dt>Parameters:</dt><dd><code>$profile</code></dl><hr /><a name="clean_sessions"></a><h2>clean_sessions()</h2><code>void <strong>clean_sessions</strong>()</code><br /><p>this should not be a function, it should be a cron. </p><p>It has however been made available so that you have a means of cleaning up unwanted sessions, even if you do not have access to the cron daemon or other scheduling mechanism. </p><hr /><a name="create_footer"></a><h2>create_footer()</h2><code>void <strong>create_footer</strong>()</code><br /><p>Creates the footer on each page </p><hr /><a name="create_header"></a><h2>create_header()</h2><code>void <strong>create_header</strong>(var $pgH1)</code><br /><p>creates the header on each page </p><dl><dt>Parameters:</dt><dd><code>$pgH1</code></dl><hr /><a name="enable_account"></a><h2>enable_account()</h2><code>void <strong>enable_account</strong>(var $userId, var $con)</code><br /><p>if validate_email==1, accounts are created in the disabled state, call this method to enable such accounts. </p><p></p><dl><dt>Parameters:</dt><dd><code>$userId</code><dd><code>$con</code></dl><hr /><a name="err_message"></a><h2>err_message()</h2><code>void <strong>err_message</strong>(var $str)</code><br /><p>display a generic error message </p><dl><dt>Parameters:</dt><dd><code>$str</code></dl><hr /><a name="gen_password"></a><h2>gen_password()</h2><code>void <strong>gen_password</strong>()</code><br /><hr /><a name="get_email"></a><h2>get_email()</h2><code>void <strong>get_email</strong>(var $username)</code><br /><p>retrieves the email address given the username, used mainly by the password reminder service. </p><p></p><dl><dt>Parameters:</dt><dd><code>$username</code></dl><hr /><a name="get_name"></a><h2>get_name()</h2><code>void <strong>get_name</strong>()</code><br /><p>this function returns the currently logged in user's username </p><hr /><a name="get_profile"></a><h2>get_profile()</h2><code>void <strong>get_profile</strong>(var $userId)</code><br /><p>returns an instance of UserProfile for the member whose userId is passed in as a parameter. </p><p></p><dl><dt>Parameters:</dt><dd><code>$userId</code></dl><hr /><a name="get_user_status"></a><h2>get_user_status()</h2><code>void <strong>get_user_status</strong>(var $userId)</code><br /><p>retrieves the uers's status. </p><p>Currently supported values are 0 - disabled. 1 - enable. 2 - admin. </p><dl><dt>Parameters:</dt><dd><code>$userId</code></dl><hr /><a name="is_admin"></a><h2>is_admin()</h2><code>void <strong>is_admin</strong>(var $sid)</code><br /><p>Are you logged in as the administrator? also updates the 'lastAccess' field in the logged users table. </p><p></p><dl><dt>Parameters:</dt><dd><code>$sid</code></dl><hr /><a name="is_logged"></a><h2>is_logged()</h2><code>void <strong>is_logged</strong>(var $sid)</code><br /><p>returns 0 if you are not logged in. </p><p>else returns your userid also updates the 'lastAccess' field in the logged users table. </p><dl><dt>Parameters:</dt><dd><code>$sid</code></dl><hr /><a name="is_valid"></a><h2>is_valid()</h2><code>void <strong>is_valid</strong>(var $user, var $password, var $con)</code><br /><p>returns userId on success. </p><p>0 on failure. </p><dl><dt>Parameters:</dt><dd><code>$user</code><dd><code>$password</code><dd><code>$con</code></dl><hr /><a name="is_valid_addr"></a><h2>is_valid_addr()</h2><code>void <strong>is_valid_addr</strong>()</code><br /><p>hotmail, msn, bigfoot and other free addresses are not allowed. </p><p></p><hr /><a name="is_valid_key"></a><h2>is_valid_key()</h2><code>void <strong>is_valid_key</strong>(var $key, var $con)</code><br /><p>Is the specified validation key ok? returns userId on success. </p><p>0 on failure. </p><dl><dt>Parameters:</dt><dd><code>$key</code><dd><code>$con</code></dl><hr /><a name="is_valid_referer"></a><h2>is_valid_referer()</h2><code>void <strong>is_valid_referer</strong>()</code><br /><p>check the referer to minimize abuse.. </p><p>todo: a more vigourous check. </p><hr /><a name="is_valid_username"></a><h2>is_valid_username()</h2><code>void <strong>is_valid_username</strong>()</code><br /><p>returns true if the username and password, and password confirm fields are set. </p><p></p><hr /><a name="log_out"></a><h2>log_out()</h2><code>void <strong>log_out</strong>()</code><br /><hr /><a name="reset_password"></a><h2>reset_password()</h2><code>void <strong>reset_password</strong>(var $newPass, var $userName)</code><br /><dl><dt>Parameters:</dt><dd><code>$newPass</code><dd><code>$userName</code></dl><hr /><a name="sanitize_variable"></a><h2>sanitize_variable()</h2><code>void <strong>sanitize_variable</strong>(var $var)</code><br /><dl><dt>Parameters:</dt><dd><code>$var</code></dl><hr /><a name="set_session"></a><h2>set_session()</h2><code>void <strong>set_session</strong>(var $userId, var $sessionId, var $con)</code><br /><p>Creates an entry in the logged users table. </p><p>Call this method directly if you want to automatically log in a new user who has just signed up. </p><dl><dt>Parameters:</dt><dd><code>$userId</code><dd><code>$sessionId</code><dd><code>$con</code></dl><hr /><a name="set_user_status"></a><h2>set_user_status()</h2><code>void <strong>set_user_status</strong>(var $userId, var $status)</code><br /><p>this method changes the user status. </p><p>The acceptable values are 0 - disable account 1 - enable account 2 - mark as admin </p><dl><dt>Parameters:</dt><dd><code>$userId</code><dd><code>$status</code></dl><hr /><a name="set_validated"></a><h2>set_validated()</h2><code>void <strong>set_validated</strong>(var $userId, var $con)</code><br /><p>generally called when the user clicks on the link given in the account verification email. </p><p></p><dl><dt>Parameters:</dt><dd><code>$userId</code><dd><code>$con</code></dl><hr /><a name="show_profile"></a><h2>show_profile()</h2><code>void <strong>show_profile</strong>(var $userId)</code><br /><p>displays the box that allows the user to view/change his profile </p><dl><dt>Parameters:</dt><dd><code>$userId</code></dl><hr />
+<table width="100%" cellpadding="0" class="header">
+<tr><td class="header">
+<a href="../overview-summary.html">Overview</a>
+<a href="package-summary.html">Package</a>
+</td><td class="short_title">
+Rad User</td></tr>
+</table>
+
+<table width="100%" cellpadding="0" class="small_links">
+<tr>
+<td><a href="../index.html" target="_top">FRAMES</a> <a href="package-functions.html" target="_top">NO FRAMES</a></td>
+</tr>
+<tr>
+<td>SUMMARY: <a href="#summary">FUNCTIONS</a></td>
+<td>DETAIL: <a href="#detail">FUNCTIONS</a></td>
+</tr>
+</table>
+
+<hr />
+
+<p class="footer">This document was generated by <a href="http://phpdoctor.sourceforge.net/">PHPDoctor: The PHP Documentation Creator</a>.</p>
+</body>
+</html>
