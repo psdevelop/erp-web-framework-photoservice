@@ -1,2 +1,2 @@
 # erp-web-framework-photoservice
-This solution - example of first using erp-web-framefork (problem version), reqired separating js and html in framework code
+This solution - example of first using erp-web-framefork, now framework codegenerating technology modificated
